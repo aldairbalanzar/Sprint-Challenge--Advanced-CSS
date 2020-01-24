@@ -1,1 +1,25 @@
 // Mixins Here
+.flex(@justify:flex, @align:stretch) {
+    display: flex;
+    justify-content: @justify;
+    align-content: @align;
+}
+
+.button-creator(@border-color, @background, @text-color) {
+    .flex(center, center);
+    width: 84%;
+    border: solid 1px @border-color;
+    border-radius: 14px;
+    background-color: @background;
+    color: @text-color;
+    font-size: 1.8rem;
+    padding: 5% 2%;
+}
+
+.keyframes(@name; @arguments) {
+	@keyframes @name { @arguments(); }
+}
+
+.animation(@arguments) {
+	animation: @arguments;
+}
